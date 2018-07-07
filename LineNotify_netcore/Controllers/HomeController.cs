@@ -10,10 +10,16 @@ namespace LineNotify_netcore.Controllers
 {
     public class HomeController : Controller
     {
+        readonly string token;
+
+        public HomeController()
+        {
+            token = "Pd8OH3yI8quQyZyc4Xpe5wu3Kr1UOlz3MM4t32HwEeK";
+        }
+
         public IActionResult Index()
         {
-            LineNotify_netcore.Helpers.LineNotifySend.SendMessage("", "");
-
+            LineNotify_netcore.Helpers.LineNotifySend.SendMessage("Test", token);
 
             return View();
         }
