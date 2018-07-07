@@ -12,6 +12,9 @@ namespace LineNotify_netcore.Controllers
     {
         public IActionResult Index()
         {
+            LineNotify_netcore.Helpers.LineNotifySend.SendMessage("", "");
+
+
             return View();
         }
 
